@@ -25,6 +25,10 @@
         {
             name: 'bundles/todos/main',
             exclude: ['main']
+        },
+        {
+            name: 'bundles/foo/main',
+            exclude: ['main']
         }
     ]
 })

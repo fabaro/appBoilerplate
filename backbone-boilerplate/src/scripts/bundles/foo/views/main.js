@@ -8,8 +8,8 @@ define([
     'mustache',
     '../collections/todoList',
     './todoView',
-    'text!../templates/fooTemplate.html'
-], function ($, _, Backbone, Mustache, TodosCollection, TodoView, fooTemplate) {
+    'text!../templates/statesTemplate.html'
+], function ($, _, Backbone, Mustache, TodosCollection, TodoView, statesTemplate) {
 
     'use strict';
 
@@ -30,7 +30,7 @@ define([
         // collection, when items are added or changed. Kick things off by
         // loading any preexisting todos that might be saved in *localStorage*.
         initialize: function() {
-            this.template = fooTemplate;
+            this.template = statesTemplate;
 
             this.Todos = new TodosCollection();
             this.input = this.$("#new-todo");
@@ -40,7 +40,7 @@ define([
             this.listenTo(this.Todos, 'reset', this.addAll);
             this.listenTo(this.Todos, 'all', this.render);
 
-            this.footer = this.$('footer');
+            this.footer = this.$('#footer');
             this.main = $('#main');
 
             this.Todos.fetch();
@@ -51,16 +51,16 @@ define([
         render: function() {
             var done = this.Todos.done().length;
             var remaining = this.Todos.remaining().length;
-
-            if (this.Todos.length) {
+            console.log('pagina FOO');
+            //if (this.Todos.length) {
                 this.main.show();
                 this.footer.show();
                 var rendered = Mustache.to_html(this.template, {done: done, remaining: remaining});
                 this.footer.html(rendered);
-            } else {
-                this.main.hide();
-                this.footer.hide();
-            }
+            //} else {
+                //this.main.hide();
+                //this.footer.hide();
+            //}
 
             this.allCheckbox.checked = !remaining;
         },

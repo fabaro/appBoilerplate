@@ -5,7 +5,7 @@ define([
     "jquery", 
     "underscore", 
     "backbone", 
-    "../collections/TodoList"
+    "../collections/todoList"
 ], function ($, _, Backbone, TodosCollection) {
 
     'use strict';

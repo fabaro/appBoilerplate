@@ -5,7 +5,7 @@ define(function (require) {
     // Import depdendencies.
     var Todo = require("../models/todo");
 
-    QUnit.module("Todos/models/todo");
+    QUnit.module("todos/models/todo");
 
     QUnit.test("Is set to complete true", function () {
         var todo = new Todo({completed: true});

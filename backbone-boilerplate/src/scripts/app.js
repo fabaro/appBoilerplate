@@ -14,7 +14,9 @@ define([
 
     // Add your modules routing here
     router.route("/*", "home", function () {
+        console.log('ingresa a url');
         this.loadModule("bundles/todos/main");
+        console.log('ingresa a url');
     });
 
     // Add your modules routing here
