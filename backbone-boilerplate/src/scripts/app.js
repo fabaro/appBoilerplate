@@ -13,14 +13,13 @@ define([
     'use strict';
 
     // Add your modules routing here
-    router.route("/*", "home", function () {
-        console.log('ingresa a url');
+    router.on("route:home", function (actions) {
         this.loadModule("bundles/todos/main");
         console.log('ingresa a url');
     });
 
     // Add your modules routing here
-    router.route("/foo", "foo", function () {
+    router.on("route:foo", function () {
         this.loadModule("bundles/foo/main");
     });
 

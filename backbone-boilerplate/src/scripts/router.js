@@ -10,6 +10,10 @@ define([
 
      // Router
     var Router = Backbone.Router.extend({
+        routes: {
+            "foo": "foo",
+            "*actions": "home"
+        },
         loadModule: function (module) {
             require([module], function (module) {
                 module();

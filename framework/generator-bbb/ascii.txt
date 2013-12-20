@@ -1,9 +1,0 @@
-   .-~0~-.
-  /   ___ \
-  |  ( _ )|             ~~ Backbone-Boilerplate ~~
-.-' (C) (C)`-       
-  |   .---.         A workflow for building Backbone.js
-  |  / .-. \                  applications.
-  |  \ `-' /
-  |   `---'
-__|_______|___

@@ -30,6 +30,7 @@ define([
         // collection, when items are added or changed. Kick things off by
         // loading any preexisting todos that might be saved in *localStorage*.
         initialize: function() {
+            console.log('aca paso algo');
             this.template = statesTemplate;
 
             this.Todos = new TodosCollection();
@@ -52,15 +53,15 @@ define([
             var done = this.Todos.done().length;
             var remaining = this.Todos.remaining().length;
 
-            if (this.Todos.length) {
+            //if (this.Todos.length) {
                 this.main.show();
                 this.footer.show();
                 var rendered = Mustache.to_html(this.template, {done: done, remaining: remaining});
                 this.footer.html(rendered);
-            } else {
-                this.main.hide();
-                this.footer.hide();
-            }
+            //} else {
+                //this.main.hide();
+                //this.footer.hide();
+            //}
 
             this.allCheckbox.checked = !remaining;
         },
